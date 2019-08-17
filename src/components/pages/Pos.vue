@@ -42,7 +42,7 @@
             <div class="title">常用商品</div>
             <div class="often-goods-list">
               <ul>
-                <li v-for="goods in oftenGoods" @click="addOrderList(goods)">
+                <li v-for="goods in oftenGoods" :key="goods" @click="addOrderList(goods)">
                   <span>{{goods.goodsName}}</span>
                   <span class="o-price">￥{{goods.price}}元</span>
                 </li>
@@ -54,7 +54,7 @@
             <el-tabs>
               <el-tab-pane label="汉堡">
                 <ul class="cookList">
-                  <li v-for="goods in type0Goods" @click="addOrderList(goods)">
+                  <li v-for="goods in type0Goods" :key="goods" @click="addOrderList(goods)">
                     <span class="foodImg">
                       <img :src="goods.goodsImg" width="100%" />
                     </span>
@@ -65,7 +65,7 @@
               </el-tab-pane>
               <el-tab-pane label="小食">
                 <ul class="cookList">
-                  <li v-for="goods in type1Goods" @click="addOrderList(goods)">
+                  <li v-for="goods in type1Goods" :key="goods" @click="addOrderList(goods)">
                     <span class="foodImg">
                       <img :src="goods.goodsImg" width="100%" />
                     </span>
@@ -76,7 +76,7 @@
               </el-tab-pane>
               <el-tab-pane label="饮料">
                 <ul class="cookList">
-                  <li v-for="goods in type2Goods" @click="addOrderList(goods)">
+                  <li v-for="goods in type2Goods" :key="goods" @click="addOrderList(goods)">
                     <span class="foodImg">
                       <img :src="goods.goodsImg" width="100%" />
                     </span>
@@ -87,7 +87,7 @@
               </el-tab-pane>
               <el-tab-pane label="套餐">
                 <ul class="cookList">
-                  <li v-for="goods in type3Goods" @click="addOrderList(goods)">
+                  <li v-for="goods in type3Goods" :key="goods" @click="addOrderList(goods)">
                     <span class="foodImg">
                       <img :src="goods.goodsImg" width="100%" />
                     </span>
