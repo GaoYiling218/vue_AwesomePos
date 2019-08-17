@@ -2,17 +2,21 @@
   <div id="app">
     <leftNav></leftNav>
     <div class="main">
-      <router-view />
+      <Pos></Pos>
+      <!-- <router-view></router-view> -->
     </div>
   </div>
 </template>
 
 <script>
 import leftNav from "@/components/common/leftNav";
+import Pos from "@/components/pages/Pos";
+
 export default {
   name: "app",
   components: {
-    leftNav
+    leftNav,
+    Pos
   }
 };
 </script>
